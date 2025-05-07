@@ -1,0 +1,415 @@
+/* ======================================================================================== 
+   Allgemeine Stile        Update Ben v.12 (Solid Header Color + Hover) Kreisfarbe Rot
+   ======================================================================================== */
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   Header-Bereich (Einfarbig mit Hover-Effekt)
+   ========================================================================== */
+
+.header-bg {
+    /* background: linear-gradient(to bottom, #6495ED, #4682B4); */ /* Vorheriger Verlauf */
+    background-color: #3498db;    /* NEU: Klares, mittleres Blau */
+    color: white;                 /* Stellt sicher, dass H1 weiß bleibt */
+    padding: 25px 0;
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    width: 99.8%;
+    position: relative;
+    transition: background-color 0.3s ease; /* Übergang für Hover */
+	border:2px solid gold;
+}
+
+/* Hover-Effekt für den Header */
+.header-bg:hover {
+    background-color: #2980b9; /* Leicht dunkleres Blau beim Hovern */
+	border:2px solid gold;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin: 0;
+}
+
+img { /* Oder eine spezifischere Klasse für deine Bilder */
+  max-width: 50%; /* Das Bild wird nie breiter als sein Container */
+  height: auto;   /* Die Höhe passt sich automatisch an, um das Seitenverhältnis beizubehalten */
+  display: block; /* Optional: Verhindert manchmal unerwünschte Abstände unter dem Bild */
+  margin-left: auto;   /* Setzt den linken Rand auf automatisch */
+  margin-right: auto;  /* Setzt den rechten Rand auf automatisch */
+  /* Optional: Eine maximale Breite, damit das Bild auf großen Bildschirmen nicht zu riesig wird */
+  /* max-width: 100%; */ 
+  border: solid 1px black;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.4); 
+}
+
+/* ==========================================================================
+   Cybersecurity Level Circle - Easy Level (Lime Green)
+   ========================================================================== */
+
+.level-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.level-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: red; /* Helles Grün */
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.circle .segment {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    clip-path: polygon(50% 50%, 100% 0, 100% 100%);
+    border: 15px solid transparent;
+    box-sizing: border-box;
+}
+
+/* Farben der Segmente für Easy Level (Lime) */
+.segment-1 { background-color: red; transform: rotate(0deg); }
+.segment-2 { background-color: red; transform: rotate(120deg); }
+.segment-3 { background-color: red; transform: rotate(240deg); }
+
+/* Innerer Kreis (passend zur NEUEN Header-Farbe) */
+.circle .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    /* background-color: #e4eefc; */ /* Vorher: Sehr helles Blau */
+    background-color: #3498db;    /* NEU: Passend zum Header-Blau */
+    border-radius: 50%;
+    /* Optional: Leichter Innenschatten */
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease; /* Übergang synchron zum Header-Hover */
+}
+
+/* Hover-Effekt für den inneren Kreis synchron zum Header */
+.header-bg:hover .circle .inner {
+     background-color: #2980b9; /* Gleiche Hover-Farbe wie Header */
+}
+
+
+/* ==========================================================================
+   Container für Hauptinhalt (Report Content)
+   ========================================================================== */
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    flex: 1;
+    margin-bottom: 30px;
+}
+
+/* ==========================================================================
+   Tool Grid
+   ========================================================================== */
+
+.tools-used h2 {
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tool-item {
+    background-color: #ecf0f1;
+    padding: 12px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    font-size: 0.9em;
+    border: 1px solid #dcdcdc;
+}
+
+/* ==========================================================================
+   Inhaltsverzeichnis
+   ========================================================================== */
+
+.toc {
+    margin-bottom: 30px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #3498db;
+}
+
+.toc h2 {
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+.toc ul { list-style-type: none; padding: 0; margin: 0; }
+.toc li { margin-bottom: 5px; }
+.toc a { color: #333; text-decoration: none; display: block; padding: 8px 0; transition: color 0.2s ease-in-out; }
+.toc a:hover { color: #3498db; }
+
+/* ==========================================================================
+   Abschnittsüberschriften (h2 in Sections)
+   ========================================================================== */
+section > h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #bdc3c7;
+    padding-bottom: 8px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+
+/* ==========================================================================
+   Separate Blöcke für Analyse, Bewertung, Empfehlung
+   ========================================================================== */
+
+.analysis,
+.evaluation,
+.recommendation {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border-left-width: 5px;
+    border-left-style: solid;
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+.analysis {
+    background-color: #e1f5fe;
+    border-left-color: #03a9f4;
+    color: #01579b;
+}
+
+.evaluation {
+    background-color: #fffde7;
+    border-left-color: #ffc107;
+    color: #5d4037;
+}
+
+.recommendation {
+    background-color: #e8f5e9;
+    border-left-color: #4caf50;
+    color: #1b5e20;
+}
+
+.analysis strong,
+.evaluation strong,
+.recommendation strong {
+    color: inherit;
+}
+
+
+/* ==========================================================================
+   Code-Block-Stile & Terminal Style (RESTAURIERTES DESIGN)
+   ========================================================================== */
+
+.code-block {
+    background-color: #272822;
+    color: #f8f8f2;
+    border: 1px solid #66d9ef;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px 0;
+    overflow-x: auto;
+}
+
+.terminal {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Consolas', 'Monaco', 'monospace';
+    padding: 15px;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.terminal .prompt {
+    color: #ff0000;
+    display: block;
+    margin: 0;
+    padding: 0;
+    line-height: 1.1;
+    white-space: pre-wrap;
+    word-break: break-all;
+    margin-bottom: 8px;
+}
+
+.terminal .command {
+    color: #66d9ef;
+    font-weight: bold;
+}
+
+.terminal pre {
+    margin: 0;
+    padding: 0;
+    color: #a6e22e;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+/* ==========================================================================
+   Passwort-Hervorhebung (nur Schriftfarbe)
+   ========================================================================== */
+
+.password {
+    color: lime;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   Footer Style (Lebendiger, Strukturierter mit Hover)
+   ========================================================================== */
+
+.footer {
+    width: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, #e4eefc, #f8faff);
+    color: #33475b;
+    padding: 25px 15px;
+    text-align: center;
+    margin-top: 40px;
+    position: relative;
+    border-top: 2px solid #3498db; /* Header-Farbe als Akzent */
+    box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.4s ease;
+}
+
+.footer p {
+    margin: 0.5rem 0;
+    font-size: 0.9em;
+    line-height: 1.6;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 3px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.footer p:first-of-type {
+     font-weight: 600;
+     color: #1a2a45;
+}
+
+.footer p::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: lime; /* Akzentfarbe Kreis-Grün */
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.footer p:hover::after {
+    width: 100%;
+    left: 0;
+    transform: translateX(0);
+}
+
+.footer p:hover {
+    color: #3498db; /* Header-Farbe als Hover-Akzent */
+}
+
+
+/* ==========================================================================
+   Flag-Container Style (Version ohne Terminal-Boxen)
+   ========================================================================== */
+
+.flag-container {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    border: 1px solid #e9ecef;
+}
+
+.flag-heading {
+    text-align: center;
+    color: #2c3e50;
+    border-bottom: 2px solid #bdc3c7;
+    padding-bottom: 8px;
+    margin-bottom: 25px;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.flag-entry {
+    margin-bottom: 20px;
+}
+
+.flag-command {
+    font-family: monospace;
+    color: #555;
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+.flag-value {
+    display: inline-block;
+}
+
+.flag-value .password {
+    font-size: 1.1em;
+}
+
+/* ==========================================================================
+   KEINE NAVBAR STYLES MEHR HIER
+   Diese werden ausschließlich durch horizontale-navbar.css gesteuert
+   ========================================================================== */
